@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUCKY-SUCKY</title>
+    <style>
+        body{
+            font-family: "Verdana";
+            font-weight: bolder;
+            font-variant: small-caps;
+            text-align: center;
+            font-size: 250%;
+            mix-blend-mode: difference;
+            color: white;
+        }
+        div{
+            height: 50px;
+            margin-top: 30vh;
+            margin-bottom: 30vh;
+        }
+        a{
+            text-decoration: none;
+            border: solid 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let fuckVerb = ["fuck", "suck", "rape", "shit on", "cum on", "gang-bang", "skin alive", "mutilate", "dismember", "eat alive", "grind"];
+        let fuckAdj = ["cock-sucking", "dead", "road killed", "shit-puking", "putrid shitstain of a", "rotten", "heroin-injected"];
+        let fuckAdj2 = ["motherfucking", "goddamn", "fucking", "choking on cum", "ass-licking", "piss-licking", "cum loving"];
+        let fuckNoun = ["horse", "skunk diarrhea", "castrated stray dog's penis","baby snorting cocaine out of his penis", "whale twat", "bufallo with a buss wheel up the ass", "stingray"];
+
+        function getNumber()
+        {
+            let n = Math.random();
+            n = n * 255;
+            return Math.floor(n);
+        }
+
+        function getRGB()
+        {
+            return `rgb(${getNumber()},${getNumber()},${getNumber()})`
+        }
+
+        function setColor()
+        {
+            return getRGB();
+        }
+
+        result1 = Math.floor(Math.random() * fuckVerb.length);
+        result2 = Math.floor(Math.random() * fuckAdj.length);
+        result3 = Math.floor(Math.random() * fuckAdj2.length);
+        result4 = Math.floor(Math.random() * fuckNoun.length);
+
+        document.body.style.background = setColor();
+        document.write(`<div>I'd rather ${fuckVerb[result1]} a ${fuckAdj[result2]} ${fuckAdj2[result3]} ${fuckNoun[result4]}!</div>`)
+    </script>
+    <a href="">New Phrase</a>
+</body>
+</html>
