@@ -44,17 +44,12 @@
             return `rgb(${getNumber()},${getNumber()},${getNumber()})`
         }
 
-        function setColor()
-        {
-            return getRGB();
-        }
-
         result1 = Math.floor(Math.random() * fuckVerb.length);
         result2 = Math.floor(Math.random() * fuckAdj.length);
         result3 = Math.floor(Math.random() * fuckAdj2.length);
         result4 = Math.floor(Math.random() * fuckNoun.length);
 
-        document.body.style.background = setColor();
+        document.body.style.background = getRGB();
         document.write(`<div>I'd rather ${fuckVerb[result1]} a ${fuckAdj[result2]} ${fuckAdj2[result3]} ${fuckNoun[result4]}!</div>`)
     </script>
     <a href="">New Phrase</a>
