@@ -37,8 +37,8 @@ for (let index = 0; index <= testArray_elements.length; index++) {
     }
     cnt = 0;
     for (let index2 = 0; index2 < testArray.length; index2++) {
-        let testelement = testArray[index2];
-        if (element === testelement){
+        const testElement = testArray[index2];
+        if (element === testElement){
             cnt++;
         }
     }
