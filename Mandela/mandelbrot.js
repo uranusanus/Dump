@@ -31,7 +31,6 @@ for (let y = 0; y < height ; y++){
         }
     }
     console.log(line);
-    // document.write(`${line} <br \/>`);
     line = "";
 }
 // console.timeEnd()
