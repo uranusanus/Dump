@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".css">
+    <title>Shet</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png" alt="Logo">
+        <nav>
+            <ul class="main-menu">
+                <li><a href="">Главная</a></li>
+                <li><a href="">О нас</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><a href="">Конфетки</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+    <main>
+        <div class="main-img">
+            <img src="img/300x450.webp" alt="Raya">
+        </div>
+        <div class="main-text">
+            <h1>Райя и последний дракон</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Информация</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Режиссер</td>
+                        <td>Дон Холл, Карлос Лопес Эстрада, Пол Бриггс</td>
+                    </tr>
+                    <tr>
+                        <td>Жанр</td>
+                        <td>мультфильм, фэнтези, боевик, комедия, приключения, семейный</td>
+                    </tr>
+                    <tr>
+                        <td>Премьера в России</td>
+                        <td>4 марта 2021</td>
+                    </tr>
+                    <tr>
+                        <td>Кассовые сборы</td>
+                        <td>0$</td>
+                    </tr>
+                    <tr>
+                        <td>Время</td>
+                        <td>114 мин. / 01:54</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">США, 2021</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <video height="400" controls>
+            <source src="file.ogg" type="video/ogg">
+            <source src="https://kino-teatr.ua/public/main/films/trailer_19456.mp4" type="video/mp4">
+            <track src="file_ru.vtt" srclang="ru">
+            <track src="file_en.vtt" srclang="en">
+        </video>
+        <nav class="targets">
+            <a href="about.html" target="info">Описание</a>
+            <a href="video.html" target="info">Другие трейлеры</a>
+            <a href="reviews.html" target="info">Рецензии</a>
+        </nav>
+        <iframe src="about.html" height="400" width="70%" name="info"></iframe>
+    </main>
+    <figure>
+        <picture>
+            <source srcset="img/960x960.webp" media="(max-width: 500px)">
+            <img src="img/raya.webp" alt="Raya">
+        </picture>
+        <figcaption>Райя и последний дракон</figcaption>
+    </figure>
+    <section>
+        <h2>Отзывы</h2>
+        <article>
+            <header class="rewH">★★★★☆</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut reiciendis nobis explicabo numquam. Accusantium dolorem ad quasi eum, nobis itaque.</p>
+            <footer class="rewF">06.03.2012</footer>
+        </article>
+        <article>
+            <header class="rewH">★★★☆☆</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut reiciendis nobis explicabo numquam. Accusantium dolorem ad quasi eum, nobis itaque.</p>
+            <footer class="rewF">06.03.2012</footer>
+        </article>
+        <article class="super-right">
+            <header class="rewH">★★★☆☆</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut reiciendis nobis explicabo numquam. Accusantium dolorem ad quasi eum, nobis itaque.</p>
+            <footer class="rewF">06.03.2012</footer>
+        </article>
+        <article>
+            <header class="rewH">★★★★★</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut reiciendis nobis explicabo numquam. Accusantium dolorem ad quasi eum, nobis itaque.</p>
+            <footer class="rewF">06.03.2012</footer>
+        </article>
+        <article>
+            <header class="rewH">★★★★★</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut reiciendis nobis explicabo numquam. Accusantium dolorem ad quasi eum, nobis itaque.</p>
+            <footer class="rewF">06.03.2012</footer>
+        </article>
+        <form method="POST" action="path/file.php">
+            <fieldset>
+                <legend>Оставить отзыв</legend>
+                <label for="inp1">Введите имя</label>
+                <input type="text" id="inp1" name="user">
+                <br>
+                <label for="inp2">Оцените</label>
+                <input type="text" list="inp3" id="inp2" name="rating">
+                <datalist id="inp3">
+                    <option value="5">Отлично</option>
+                    <option value="4">Неплохо</option>
+                    <option value="3">Сойдёт</option>
+                    <option value="2">Кал</option>
+                    <option value="1">Зачем жить</option>
+                </datalist>
+                <br>
+                <textarea cols="30" rows="10" placeholder="Введите комментарий"></textarea>
+                <button type="submit">Отправить отзыв</button>
+            </fieldset>
+        </form>
+    </section>
+    <footer id="main-footer">&copy; Haremor</footer>
+</body>
+</html>

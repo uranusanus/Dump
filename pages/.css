@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Balsamiq+Sans&family=Roboto+Slab:wght@300;400&display=swap');
+
+html {
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    background-color: #333;
+    color: #f2f2f2;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 0;
+    font: 3rem "Balsamiq Sans", fantasy;
+}
+h2 {
+    margin: 0 0 1em;
+    font: normal small-caps 900 30px / 2 "Balsamiq Sans", fantasy;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: greenyellow;
+}
+a:visited {
+    color: yellowgreen;
+}
+a:active {
+    color: forestgreen;
+}
+header {
+    /* background: yellow; */
+    padding: 2em;
+}
+header>img {
+    height: 3em;
+    float: left;
+}
+header>nav {
+    float: right;
+}
+.clearfix {
+    clear: both;
+}
+.main-menu>li {
+    display: inline;
+    padding-left: 2em;
+}
+.main-menu a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    /* line-height: 3; */
+}
+main {
+    padding: 0 2em;
+}
+.main-img {
+    width: 50%;
+    float: left;
+}
+.main-img img {
+    width: 100%;
+}
+.main-text {
+    float: left;
+    width: calc(50% - 2em);
+    margin-left: 2em
+}
+table {
+    width: 100%;
+}
+th {
+    text-align: left;
+    font-weight: 400;
+    color: greenyellow;
+}
+td:first-child {
+    width: 40%;
+}
+td, th {
+    padding: .6em 0;
+}
+video {
+    clear: both;
+    margin: 2em 0;
+    width: 100%;
+}
+hr {
+    display: none;
+}
+.targets {
+    font-size: 0;
+    font-weight: 400;
+}
+.targets a {
+    font-size: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1em 1em 0 0;
+    line-height: 44px;
+    padding: .5em 1em;
+}
+iframe {
+    width: 100%;
+    border: 1px solid yellowgreen;
+    border-radius: 0 1em 1em 1em;
+}
+figure {
+    margin: 0;
+    padding: 2em;
+}
+figure img {
+    width: 100%
+}
+figcaption {
+    font: 20px / 2 "Balsamiq Sans", fantasy;
+    color: greenyellow;
+    text-align: right;
+}
+section {
+    padding: 0 2em 2em;
+}
+h2 {
+    text-align: center;
+}
+article {
+    background: darkslateblue;
+    width: calc(100% / 3 - 20px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid yellow;
+    padding: 1em;
+    border-radius: 1em;
+}
+.super-right {
+    margin-right: 0;
+}
+.revH {
+    padding: 0;
+    color: yellow;
+}
+form {
+    clear: both;
+}
+fieldset {
+    /* display: inline-block; */
+    position: fixed;
+    width: 300px;
+    /* height: 350px; */
+    right: 0;
+    bottom: -320px;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: .5em 0 0 .5em;
+    background-color: darkslateblue;
+    color: yellow;
+    border-style: dotted;
+    border-color: inherit;
+    transition: bottom 1s;
+}
+fieldset:hover {
+    bottom: 0;
+}
+textarea {
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: .5em;
+}
+input {
+    position: absolute;
+    right: calc(1em + 2px);
+    height: 2em;
+}
+label {
+    line-height: 2em;
+    display: inline-block;
+    margin-bottom: .5em;
+}
+footer:not(.revF) {
+    padding: 2em;
+    text-align: center;
+    color: yellowgreen;
+}
+[type="submit"] {
+    background-color: #f2f2f2;
+    color: #222222;
+    border-radius: .5em;
+    border: none;
+    outline: none;
+    padding: .5em;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 1200px) {
+    body {
+        width: auto;
+    }
+}
+@media screen and (min-width: 1201px) {
+    body {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 880px) {
+    article {
+        width: calc(50% - 15px)
+    }
+    .super-right {
+        margin-right: 30px;
+    }
+    article:nth-child(2n) {
+        margin-right: 0;
+    }
+    .main-img, .main-text {
+        width: 100%;
+    }
+    h1 {
+        margin-top: 2em;
+    }
+}
