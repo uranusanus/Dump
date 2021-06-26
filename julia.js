@@ -1,21 +1,29 @@
-let width = 100, height = 50;
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+const iterNumInput = document.getElementById("iter_num")
+const iterNumBox = document.getElementById("iter_num_box")
+
+const putPixel = (x, y, fillColor = "black") => {
+    context.fillStyle = fillColor;
+    context.fillRect(x, y, 1, 1);
+}
+
+let width = canvas.width, height = canvas.height;
+const scale = 30;
+const esc_radius = 5;
+let max_iter = +iterNumInput.value;
 let a, b, new_a, new_b;
 let cx = 0, cy = 0;
 let angle = 0;
-let esc_radius = 5;
-let max_iter = 10;
-let line = "";
 
-while (true) {
+const drawJulia = () => {
     cx = Math.sin(angle);
     cy = Math.cos(angle);
-    angle += 0.01;
-    console.clear();
-    // console.time();
+    angle += 0.02;
     for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
-            a = (x - 50) / 30;
-            b = (y - 25) / 30;
+            a = (x - width / 2) / scale;
+            b = (y - height / 2) / scale;
             for (var n = 0; n < max_iter; n++) {
                 new_a = a * a - b * b + cx;
                 new_b = 2 * a * b + cy;
@@ -26,14 +34,23 @@ while (true) {
                 b = new_b;
             }
             if (n === max_iter) {
-                line += "@";
+                putPixel(x, y);
             } else {
-                line += " ";//`\u2080`;
+                putPixel(x, y, `rgba(calc(0 + ${n * 25}), calc(0 + ${n * 10}), calc(0 + ${n * 20}), ${1 / n}`);
             }
         }
-        console.log(line);
-        // document.write(`${line} <br \/>`);
-        line = "";
     }
-    // console.timeEnd()
 }
+
+// const clearContext = () => {
+//     context.clearRect(0, 0, canvas.width, canvas.height);
+// }
+
+iterNumInput.addEventListener("input", (e) => {
+    max_iter = +iterNumInput.value;
+    iterNumBox.innerText = e.target.value;
+})
+
+setInterval(() => {
+    drawJulia();
+}, 10)
